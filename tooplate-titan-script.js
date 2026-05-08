@@ -136,7 +136,7 @@ if (quizForm && quizResult) {
         const q3 = document.querySelector('input[name="q3"]:checked');
 
         if (!q1 || !q2 || !q3) {
-            quizResult.textContent = "Please answer all 3 questions before checking your score.";
+            quizResult.textContent = "Please answer all questions before checking your score.";
             return;
         }
 
