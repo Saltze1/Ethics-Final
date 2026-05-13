@@ -129,13 +129,15 @@ if (quizForm && quizResult) {
         event.preventDefault();
 
         let score = 0;
-        const totalQuestions = 3;
+        const totalQuestions = 4;
 
         const q1 = document.querySelector('input[name="q1"]:checked');
         const q2 = document.querySelector('input[name="q2"]:checked');
         const q3 = document.querySelector('input[name="q3"]:checked');
+        const q4 = document.querySelector('input[name="q4"]:checked');
 
-        if (!q1 || !q2 || !q3) {
+
+        if (!q1 || !q2 || !q3 || !q4) {
             quizResult.textContent = "Please answer all questions before checking your score.";
             return;
         }
@@ -149,6 +151,10 @@ if (quizForm && quizResult) {
         }
 
         if (q3.value === "correct") {
+            score++;
+        }
+
+        if (q4.value === "correct") {
             score++;
         }
 
