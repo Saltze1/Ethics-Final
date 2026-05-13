@@ -2093,3 +2093,64 @@ h3,
 .about-card a:hover {
     text-decoration: underline;
 }
+/* Fix centered navbar headings */
+.nav-container {
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 2rem;
+}
+
+/* Make nav links evenly centered */
+.nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Clean navbar link styling */
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Remove the weird extra line/circle effect from the template */
+.nav-links a::before,
+.nav-links a::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Cleaner hover/active state */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-blue);
+    background: rgba(118, 169, 250, 0.14);
+    border: none !important;
+    box-shadow: none !important;
+    transform: none;
+}
+
+/* Prevent the active Home tab from turning into a huge pill/circle */
+.nav-links li,
+.nav-links li a {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* Mobile menu should not mess with desktop centering */
+.mobile-menu-btn {
+    position: absolute;
+    right: 2rem;
+}
